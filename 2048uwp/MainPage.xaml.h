@@ -4,7 +4,6 @@
 //
 
 #pragma once
-
 #include "MainPage.g.h"
 
 namespace _2048uwp
@@ -18,11 +17,30 @@ namespace _2048uwp
 		MainPage();
 
 	private:
-		int havempty();
-		void printmyscore();
+		int activeblocks();
+		void brushinit();
 		void btninit();
+		short calScore(short arr[6][6]);
+		int downadd();
+		int downmove();
 		void drawblocks();
 		void gamedisplay();
+		void goBack();
+		int havempty();
+		int isbglight();
+		int issingle(short i, short j);
+		int judgeWin();
+		int leftadd();
+		int leftmove();
+		errno_t loadfromfile();
+		void newblock();
+		void printmyscore();
+		int rightadd();
+		int rightmove();
+		int save2file();
+		int upadd();
+		int upmove();
+
 		void stage_SizeChanged(Platform::Object^ sender, Windows::UI::Xaml::SizeChangedEventArgs^ e);
 		void Page_SizeChanged(Platform::Object^ sender, Windows::UI::Xaml::SizeChangedEventArgs^ e);
 		void bbk_Click(Platform::Object^ sender, Windows::UI::Xaml::RoutedEventArgs^ e);
